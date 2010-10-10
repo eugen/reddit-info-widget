@@ -17,6 +17,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
       on Reddit!
     </div>
     <script type="text/javascript">
+      if(window.location != "http://localhost/test.html") {
+        alert("This test page only works when it is served at \"http://localhost/test.html\"");
+      }
       loadRedditInfo("#reddit-info-widget");
     </script>
   </body>
