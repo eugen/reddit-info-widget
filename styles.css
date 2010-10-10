@@ -1,0 +1,7 @@
+#reddit-info-widget {
+    background-image: url("http://www.reddit.com/static/blog_snoo.gif");
+    background-repeat: no-repeat;
+    height: 40px;
+    line-height: 48px;
+    padding-left: 32px;
+}
