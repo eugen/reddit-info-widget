@@ -13,6 +13,8 @@ function loadRedditInfo(template) {
     template = $(template);
 
     template.html(template.html().
+      replace("{score}", entry.score).
+      replace("{downvotes}", entry.downs).
       replace("{upvotes}", entry.ups).
       replace("{score}", entry.score).
       replace("{comment_link}", "http://reddit.com" + entry.permalink).
