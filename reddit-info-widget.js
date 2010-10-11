@@ -13,12 +13,12 @@ function loadRedditInfo(template) {
     template = $(template);
 
     template.html(template.html().
-      replace("{score}", entry.score).
-      replace("{downvotes}", entry.downs).
-      replace("{upvotes}", entry.ups).
-      replace("{score}", entry.score).
-      replace("{comment_link}", "http://reddit.com" + entry.permalink).
-      replace("{comment_count}", entry.num_comments));
+      replace("$score", entry.score).
+      replace("$downvotes", entry.downs).
+      replace("$upvotes", entry.ups).
+      replace("$score", entry.score).
+      replace("$comment_link", "http://reddit.com" + entry.permalink).
+      replace("$comment_count", entry.num_comments));
     template.show();
   };
   $.ajax({ url: "http://www.reddit.com/api/info.json?url=" + encodeURI(location.href),
