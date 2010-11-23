@@ -16,12 +16,19 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
       <a class='comments' href='http://reddit.com$permalink'>$num_comments comments</a>
       on Reddit!
     </div>
+    <hr />
+    <ul id="top-msdn-posts">
+      <li>
+	Top post $num: <a href="$url">$title</a>
+      </li>
+    </ul> 
     <script type="text/javascript">
       if(window.location != "http://localhost/test.html") {
         alert("This test page only works when it is served at \"http://localhost/test.html\"");
       }
       $(function() {
-        loadRedditInfo("#reddit-info-widget");
+        reddit.info("#reddit-info-widget");
+        reddit.topPostsForDomain("blogs.msdn.com", "#top-msdn-posts");
       });
     </script>
   </body>
